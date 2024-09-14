@@ -1,0 +1,28 @@
+<div class="x01-main screen">
+  <div class=" header d-flex">
+    <img class="logo" src="../../../assets/logo.png" alt="sfsdfsdf">
+    <h1>HR System</h1>
+  </div>
+  <div class="contener d-flex ">
+    <img class="login-img"src="../../../assets/login.png" alt="fasdfsagv">
+    <form action="" class="login-form flex-column">
+      <h1>SIGN IN</h1>
+      <div class="email">
+        <label for="">Email</label>
+        <input type="email" placeholder="employee@gmail.com" required />
+      </div>
+      <div>
+          <div class="forgetPass d-flex justify-content-end">
+            <a routerLink="/forgetpassword" ><span>forget Password</span></a>
+            </div>
+        <label for="">Password</label>
+
+        <input type="password" placeholder="******" required />
+      </div>
+      <div class="btn-login d-flex justify-content-center">
+        <button class="btn " (click)="login()">SIGN IN</button>
+      </div>
+    </form>
+  </div>
+</div>
+<app-footer></app-footer>

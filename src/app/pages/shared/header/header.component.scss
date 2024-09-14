@@ -1,0 +1,147 @@
+.header{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px ;
+  z-index: 99;
+  background: #0673C0;
+  margin-bottom: 0px;
+
+}
+.icon{
+  margin: 10px 5px ;
+  color: #FFFFFF;
+  margin-top: 8%;
+}
+
+.header .nav h1{
+  color: #FFFFFF;
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 7%;
+  padding-left: 2px;
+}
+.logo {
+  width: 4vh;
+  height: 4vh;
+  margin-top: 4%;
+}
+.header a{
+  text-decoration: none;
+  color:#FFFFFF;
+  font-size: 14px;
+  font-weight: 600;
+  margin-right: 30px;
+}
+
+.header h3 {
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+
+}
+
+.profile-img{
+  width: 4vh;
+  height: 4vh;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.item2{
+  margin:  9px  0px  0px 73% ;
+  align-items: center;
+}
+.sidebar{
+  position: absolute;
+  left: -250px;
+  padding-right: 2%;
+  background:#D2D2D2;
+  transition: left 0.3s;
+  height: 105%;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.menu-bar{
+  margin-top: 15%;
+}
+
+.sidebar .text {
+    font-size: 18px;
+    font-weight: 500;
+    color: #414141;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    opacity: 1;
+    margin-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+  }
+.sidebar .nav-link{
+  justify-content: space-between;
+}
+
+.menu-item{
+  margin-bottom: 25px;
+}
+
+
+  .sidebar li{
+    list-style: none;
+
+  }
+.sidebar li a{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+
+}
+.nav-mainItem{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+.nav-profile{
+  margin-top: 100%;
+
+}
+.nav-profile li{
+  padding-left: 15px;
+
+}
+.nav-profile span{
+  color: #414141;
+  cursor: pointer;
+}
+.nav-profile .fa-angle-right{
+  padding-left: 10%;
+  color: #414141;
+  cursor: pointer;
+}
+
+.textH2{
+  position: absolute;
+  left: 250px;
+}
+#tH2{
+  position: absolute;
+  top: 14%;
+  margin-left: 30px;
+  font-size: 20px;
+  color: #0673C0;
+
+
+}
+

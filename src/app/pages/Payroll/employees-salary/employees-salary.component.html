@@ -1,0 +1,11 @@
+<app-header [isTitle]="pageTitle"></app-header>
+<div class="ng-container">
+  <a href=""><i class="fa-solid fa-house"></i></a>
+  <i class="fa-solid fa-angle-right"></i>
+  <a href=""><span>Payroll</span></a>
+  <i class="fa-solid fa-angle-right"></i>
+  <a href=""><span>Employees Salary</span></a>
+</div>
+<app-employee-table [data]="Salaydata"
+[columns]="headers"></app-employee-table>
+<app-footer></app-footer>

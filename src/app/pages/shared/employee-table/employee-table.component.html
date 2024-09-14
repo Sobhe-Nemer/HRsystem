@@ -1,0 +1,29 @@
+<div class="search-bar">
+  <input type="text" placeholder="Employee ID">
+  <input type="text" placeholder="Employee Name">
+  <button>Search</button>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th *ngFor="let column of columns">{{ column }}</th>
+      <th *ngIf="actions.length">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of data">
+      <ng-container *ngFor="let column of columns">
+        <td *ngIf="column === 'Employee'">
+          <img [src]="row['Employee'][0]" alt="{{ row['Employee'][1] }}" width="50" height="50">
+          {{ row['Employee'][1] }}
+        </td>
+        <td *ngIf="column !== 'Employee'">{{ row[column] }}</td>
+      </ng-container>
+      <td *ngIf="actions.length">
+        <button *ngFor="let action of actions" (click)="onActionClick(action, row)">
+          {{ action }}
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

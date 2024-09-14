@@ -1,0 +1,71 @@
+.pass-img{
+  width: 50%;
+
+}
+.logo {
+  width: 10vh;
+  height: 10vh;
+  margin: 0px 0px 20px 0px;
+}
+
+h1 {
+  margin-left: 2px;
+  font-size: 24px;
+  padding-top: 10px;
+  color: #045E9D;
+}
+.header{
+  margin: 30px 0px 5% 10px;
+}
+.span1{
+  margin: 0px 0px 15% 40px;
+  color:#0673C0;
+  font-size: 18px;
+  font-weight: bold;
+}
+.forget-form{
+  width: 100%;
+  z-index: 0;
+  background-color: #D2D2D2;
+
+
+}
+.forget-form {
+  display: flex;
+  flex-direction: column;
+  background-color: #D2D2D2;
+  padding: 1%;
+
+}
+
+.forget-form label {
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+.forget-form .email{
+  margin-bottom: 30px;
+  align-items: center;
+}
+.forget-form input {
+  width: 50%;
+  padding: 8px;
+  border: none ;
+  border-radius: 20px;
+
+}
+.btn {
+  width: 30%;
+  background-color: #045E9D;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.login a{
+  text-decoration: none;
+  font-size: 15px;
+  color: #000;
+  margin-top: 30px;
+
+
+}

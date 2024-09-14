@@ -1,0 +1,78 @@
+
+.search-bar {
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    top: 28%;
+    right: 22%;
+    left: 24%;
+    padding: 0px 0px 0px 14px;
+    align-items: center;
+    width: 61%;
+}
+
+.search-bar input[type="text"] {
+    padding: 12px;
+    border: 1px solid #a1a1a1;
+    width: 200px;
+    border-radius: 20px;
+    height: 40px;
+    width: 35%;
+
+}
+
+.search-bar button {
+  background-color: #045E9D;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 20px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  width: 20%;
+  margin-left: 60px;
+  padding-left: 50px;
+  i{
+    color: #fff;
+    padding-right: 8px;
+    font-size: 15px;
+    padding-top: 3px;  }
+}
+
+.search-bar button:hover {
+  background-color: #0056b3;
+}
+.employee-cards {
+  position: absolute;
+  top:40%;
+  right: 15%;
+  left: 25%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+
+.employee-card {
+  background-color: #f1f1f1;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.employee-card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.employee-info p {
+  font-weight: bold;
+}
+
+.employee-info span {
+  color: #666;
+}

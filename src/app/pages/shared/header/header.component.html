@@ -1,0 +1,120 @@
+<header class="header ">
+  <nav class="nav item1 ">
+      <i (click)="openSideBar()" class="fa-solid fa-bars icon"></i>
+      <img class="logo" src="../../../assets/logo.png" alt="sfsdfsdf">
+      <h1>HR Sysrem</h1>
+    </nav>
+    <div class="item2" ><h3>العربية</h3></div>
+    <div class="item3">
+      <i class="fa-solid fa-bell icon"></i>
+        <img src="../../../../assets/img1.jpg" alt="" class="profile-img">
+        <a href="">
+          <span>Sobhe Nemer</span>
+        </a>
+      </div>
+</header>
+<nav [class.open]="isSidebarOpen" class=" sidebar ">
+  <div class="menu-bar">
+      <div class="menu" >
+              <li title="Dashboard" class="menu-item">
+                  <a routerLink="/home" class="nav-link">
+                      <span class="text nav-text">Dashboard</span>
+                      <i class="fa-solid fa-angle-right"></i>
+                  </a>
+
+              </li>
+              <li (click)="Employee()"   title="Employees" class="menu-item">
+                  <div class="nav-mainItem ">
+                      <span class="text nav-text">Employees</span>
+                      <i class="fa-solid fa-angle-right"></i>
+                  </div>
+                  @if(isEmployee ){<ul >
+                    <li>
+                      <a routerLink="/all-employees" class="nav-link">
+                        <span >All Employees</span>
+                    </a>
+                    </li>
+
+                  </ul>}
+              </li>
+            <li (click)="Leave()"   title="Leave management" class="menu-item">
+                <div class="nav-mainItem ">
+                    <span class="text nav-text">Leave management</span>
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+                @if(isLeave){<ul >
+                  <li>
+                    <a routerLink="/all-leave" class="nav-link">
+                      <span >All Leave</span>
+                  </a>
+                  </li>
+                  <li>
+                    <a routerLink="/attendance" class="nav-link">
+                      <span >attendance</span>
+                  </a>
+                  </li>
+                  <li>
+                    <a routerLink="/overtime" class="nav-link">
+                      <span >overtime</span>
+                  </a>
+                  </li>
+                </ul>
+              }
+              </li>
+              <li  (click)="Requests()" title=" Requests approval" class="menu-item">
+                  <div class="nav-mainItem ">
+                      <span class="text nav-text"> Requests approval</span>
+                      <i class="fa-solid fa-angle-right"></i>
+                  </div>
+                      @if(isRequests ){<ul>
+                        <li>
+                          <a routerLink="/employees-request" class="nav-link">
+                            <span >Employee Requests</span>
+                        </a>
+                        </li>
+                      </ul>}
+
+              </li>
+              <li (click)="payroll()"  title=" Payroll" class="menu-item">
+                <div class="nav-mainItem ">
+                    <span class="text nav-text">Payroll</span>
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+
+                @if(isPayroll ){<ul>
+                  <li>
+                    <a routerLink="/employees-salary" class="nav-link">
+                      <span >Employees Salary</span>
+                  </a>
+                  </li>
+                </ul>}
+            </li>
+            <li title="Reports" class="menu-item">
+              <a routerLink="/reports" class="nav-link">
+                  <span class="text nav-text">Reports</span>
+                  <i class="fa-solid fa-angle-right"></i>
+                </a>
+          </li>
+      </div>
+      <div class="nav-profile">
+        <li>
+          <a routerLink="/Profile" class="">
+              <span><img src="../../../../assets/img1.jpg" alt="" class="profile-img">Profile
+              </span><i class="fa-solid fa-angle-right "></i>
+            </a>
+
+
+      </li>
+      <li>
+        <a  (click)="logout()" >
+            <span>
+              <i class="fa-solid fa-right-from-bracket"></i>
+              Logout</span>
+                <i class="fa-solid fa-angle-right"></i>
+          </a>
+
+    </li>
+    </div>
+  </div>
+</nav>
+<h2  [class.textH2]="isSidebarOpen" class="textH2" id="tH2" >{{isTitle}}</h2>

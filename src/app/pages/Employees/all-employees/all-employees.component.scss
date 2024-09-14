@@ -1,0 +1,27 @@
+h2 {
+  color: #007bff;
+  font-size: 24px;
+}
+
+.ng-container {
+    top: 14%;
+    display: flex;
+    justify-content: end;
+    padding-right: 30px;
+    align-items: center;
+    z-index: -1;
+    margin-top: 3%;
+}
+
+.ng-container .fa-house,
+.ng-container a {
+  color: #0673C0;
+  font-size: 20px;
+  padding: 4px;
+  text-decoration: none;
+}
+
+.ng-container .fa-angle-right{
+  margin-top: 4px;
+
+}
