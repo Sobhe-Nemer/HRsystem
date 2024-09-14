@@ -18,7 +18,13 @@ export class AllEmployeesComponent {
     {img:'../../../../assets/img1.jpg',name:'Sobhe Nemer',position:'developer'},
     {img:'../../../../assets/img1.jpg',name:'Sobhe Nemer',position:'developer'},
     {img:'../../../../assets/img1.jpg',name:'Sobhe Nemer',position:'developer'},
-    {img:'../../../../assets/img1.jpg',name:'Sobhe Nemer',position:'developer'}
+    {img:'../../../../assets/img1.jpg',name:'Sobhe Nemer',position:'developer'},
+    {img:'../../../../assets/img1.jpg',name:'Sobhe Nemer',position:'developer'},
+    {img:'../../../../assets/img1.jpg',name:'Sobhe Nemer',position:'developer'},
+    {img:'../../../../assets/img1.jpg',name:'Sobhe Nemer',position:'developer'},
+    {img:'../../../../assets/img1.jpg',name:'Sobhe Nemer',position:'developer'},
+    {img:'../../../../assets/img1.jpg',name:'Sobhe Nemer',position:'developer'},
+    {img:'../../../../assets/img1.jpg',name:'Sobhe Nemer',position:'developer'},
 
   ];
   pageTitle=["All Employee"];

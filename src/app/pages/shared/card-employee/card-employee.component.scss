@@ -5,10 +5,10 @@
     position: absolute;
     top: 28%;
     right: 22%;
-    left: 24%;
+    left: 18%;
     padding: 0px 0px 0px 14px;
     align-items: center;
-    width: 61%;
+    width: 70%;
 }
 
 .search-bar input[type="text"] {
@@ -47,11 +47,28 @@
 .employee-cards {
   position: absolute;
   top:40%;
-  right: 15%;
-  left: 25%;
+  right: 10%;
+  left: 19%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;
+  padding-right: 40px;
+  max-height: 70%;
+  overflow-y: scroll;
+
+}
+.employee-cards::-webkit-scrollbar{
+  width: 7px;
+  padding-left: 20px;
+}
+.employee-cards::-webkit-scrollbar-track{
+  background: #fff;
+  border-radius: 20px;
+}
+
+.employee-cards::-webkit-scrollbar-thumb{
+  background:#045E9D;
+  border-radius: 20px;
 }
 
 .employee-card {
