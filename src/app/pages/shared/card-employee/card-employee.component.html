@@ -1,7 +1,9 @@
+<section class="container">
 <div class="search-bar">
   <input type="text" placeholder="Employee ID">
   <input type="text" placeholder="Employee Name">
-  <button><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+  <button ><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+  <button><i class="fa-solid fa-plus"></i>Add employee</button>
 </div>
 <section class="employee-cards" >
   <div  *ngFor="let data of data" class="employee-card" >
@@ -12,4 +14,5 @@
           <span>{{data.position}}</span>
       </div>
   </div>
+</section>
 </section>

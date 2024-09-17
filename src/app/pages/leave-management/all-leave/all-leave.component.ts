@@ -16,10 +16,14 @@ export class AllLeaveComponent implements AfterViewInit {
   @ViewChild(HeaderComponent) headerComponent!: HeaderComponent;
 
   leaveData = [
-    { Employee: ['assets/img1.jpg', 'John Doe'], typeLeave: 'Annual', email: 'john@example.com', from: '2023-09-01', to: '2023-09-10', reason:"df" },
-    { Employee: ['assets/img1.jpg', 'John Doe'], typeLeave: 'Annual', email: 'john@example.com', from: '2023-09-01', to: '2023-09-10',reason:"fg" },
-    { Employee: ['assets/img1.jpg', 'John Doe'], typeLeave: 'Annual', email: 'john@example.com', from: '2023-09-01', to: '2023-09-10', reason:"fdgdfg" },
-    { Employee: ['assets/img1.jpg', 'John Doe'], typeLeave: 'Annual', email: 'john@example.com', from: '2023-09-01', to: '2023-09-10', reason:"nm," },
+    { Employee: ['assets/img1.jpg', 'Sobhe'], typeLeave: 'Annual', email: 'sobhe@example.com', from: '2023-09-01', to: '2023-09-10', reason:"df" },
+    { Employee: ['assets/img1.jpg','sobhe'], typeLeave: 'Annual', email: 'sobhe@example.com', from: '2023-09-01', to: '2023-09-10',reason:"fg" },
+    { Employee: ['assets/img1.jpg', 'sobhe'], typeLeave: 'Annual', email: 'sobhe@example.com', from: '2023-09-01', to: '2023-09-10', reason:"fdgdfg" },
+    { Employee: ['assets/img1.jpg', 'sobhe'], typeLeave: 'Annual', email: 'sobhe@example.com', from: '2023-09-01', to: '2023-09-10', reason:"nm," },
+    { Employee: ['assets/img1.jpg', 'sobhe'], typeLeave: 'Annual', email: 'sobhe@example.com', from: '2023-09-01', to: '2023-09-10', reason:"nm," },
+    { Employee: ['assets/img1.jpg', 'sobhe'], typeLeave: 'Annual', email: 'sobhe@example.com', from: '2023-09-01', to: '2023-09-10', reason:"nm," },
+    { Employee: ['assets/img1.jpg', 'sobhe'], typeLeave: 'Annual', email: 'sobhe@example.com', from: '2023-09-01', to: '2023-09-10', reason:"nm," },
+    { Employee: ['assets/img1.jpg', 'sobhe'], typeLeave: 'Annual', email: 'sobhe@example.com', from: '2023-09-01', to: '2023-09-10', reason:"nm," },
     ];
 
   paddinggH2 = false;

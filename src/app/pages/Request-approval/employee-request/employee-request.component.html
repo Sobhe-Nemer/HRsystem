@@ -6,6 +6,10 @@
   <i class="fa-solid fa-angle-right"></i>
   <a href=""><span>Employee Request</span></a>
 </div>
+<app-employee-table
+[data]="requestdata"
+  [columns]="['Employee', 'Type Request', 'Email','reason']"
+  [actions]="['Approve']"
+  (actionEvent)="handleAction($event)">
+</app-employee-table>
 <app-footer></app-footer>
-
-

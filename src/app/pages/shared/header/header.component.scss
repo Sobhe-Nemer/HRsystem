@@ -42,7 +42,11 @@
   cursor: pointer;
 
 }
-
+.nav-item2{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .profile-img{
   width: 4vh;
   height: 4vh;
@@ -50,7 +54,7 @@
   margin-right: 5px;
 }
 .item2{
-  margin:  9px  0px  0px 73% ;
+  margin:  9px  16px   0px  ;
   align-items: center;
 }
 .sidebar{
@@ -114,7 +118,7 @@
   justify-content: space-between;
 }
 .nav-profile{
-  margin-top: 100%;
+  margin-top: 90%;
 
 }
 .nav-profile li{

@@ -1,8 +1,10 @@
-<div class="search-bar">
+<section class="employee-section">
+  <div class="search-bar">
   <input type="text" placeholder="Employee ID">
   <input type="text" placeholder="Employee Name">
   <button>Search</button>
 </div>
+<div class="table-container">
 <table class="table table-striped">
   <thead>
     <tr>
@@ -10,7 +12,7 @@
       <th *ngIf="actions.length">Actions</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody >
     <tr *ngFor="let row of data">
       <ng-container *ngFor="let column of columns">
         <td *ngIf="column === 'Employee'">
@@ -21,9 +23,12 @@
       </ng-container>
       <td *ngIf="actions.length">
         <button *ngFor="let action of actions" (click)="onActionClick(action, row)">
-          {{ action }}
+          <i class="fa-solid fa-circle"></i>{{ action }}
         </button>
       </td>
     </tr>
+
   </tbody>
 </table>
+</div>
+</section>

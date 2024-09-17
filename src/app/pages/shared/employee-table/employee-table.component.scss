@@ -1,17 +1,21 @@
 
-.search-bar {
-  margin-bottom: 20px;
+.employee-section{
   display: flex;
-  gap: 10px;
+  flex-direction: column;
   position: absolute;
-  top: 32%;
-  right: 25%;
+  top: 30%;
   left: 20%;
-  background-color: #D9D9D9;
-  padding: 0px 0px 0px 14px;
-  height: 50px;
-  align-items: center;
-  width: 65%;
+  width: 73%;
+
+}
+.search-bar {
+    display: flex;
+    gap: 10px;
+    background-color: #D9D9D9;
+    padding: 0px 0px 0px 14px;
+    height: 50px;
+    align-items: center;
+
 }
 
 .search-bar input[type="text"] {
@@ -45,16 +49,32 @@
 .search-bar button:hover {
   background-color: #0056b3;
 }
+.table-container{
+  overflow-y: scroll;
+  height: 400px;
+  overflow-x: hidden;
+
+}
+.table-container::-webkit-scrollbar{
+  width: 5px;
+  padding-left: 20px;
+}
+.table-container::-webkit-scrollbar-track{
+  background: #fff;
+  border-radius: 20px;
+}
+
+.table-container::-webkit-scrollbar-thumb{
+  background:#045E9D;
+  border-radius: 20px;
+}
+
 table {
-  width: 65%;
   border-collapse: collapse;
   margin-bottom: 50px;
   background-color: white;
-  position: absolute;
-  top: 40%;
-  right: 25%;
-  left: 20%;
   align-items: center;
+
 
 }
 
@@ -75,4 +95,22 @@ table td img {
   width: 40px;
   height: 40px;
   margin-right: 10px;
+}
+table button
+{
+border-radius: 20px;
+align-items: center;
+display: flex;
+justify-content: center;
+i{
+  color: green;
+}
+}
+
+
+@media (max-width:1200px) {
+  .employee-section{
+    left: 27%;
+    z-index: -1;
+  }
 }

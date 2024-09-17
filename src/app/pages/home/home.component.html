@@ -4,6 +4,16 @@
   <i class="fa-solid fa-angle-right"></i>
   <a href=""><span>Dashboard</span></a>
 </div>
+<div routerLink="/attendance" class="piechart">
+  <h3>Daily attendance rate</h3>
+  <canvas id="myPieChart" width="400" height="400"></canvas>
+</div>
+<div routerLink="/overtime" class="barChart">
+  <h3>Avg Overtime </h3>
+  <canvas id="myBarChart"  width="400" height="300"></canvas>
+</div>
+<div class="calendar-container">
+  <h3>Calendar</h3>
+  <full-calendar [options]="calendarOptions"></full-calendar>
+</div>
 <app-footer></app-footer>
-
-

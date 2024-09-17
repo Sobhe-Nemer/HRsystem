@@ -1,3 +1,4 @@
+
 h2 {
   color: #007bff;
   font-size: 24px;
@@ -24,5 +25,112 @@ h2 {
 
 .ng-container .fa-angle-right{
   margin-top: 4px;
+
+}
+.employee-data{
+  display: flex;
+  padding: 10px;
+  position: absolute;
+  width: 78%;
+  margin-top: 2%;
+  margin-left: 20%;
+  z-index: -1;
+
+}
+.employee-card {
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    width: 290px;
+  height: 280px;
+
+  }
+.employee-card button{
+  color: white;
+  background-color: black;
+  width: 118%;
+  border-radius: 0px 0px 20px 20px;
+}
+.bio{
+  width: 50%;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.bio .card{
+  border: 2px solid;
+}
+.card h4{
+  font-size: 2rem;
+  color: black;
+  background-color: #0673C0;
+  padding: 4px;
+  border-bottom: 1px solid;
+}
+.card p{
+  font-size: 1rem;
+  color: #000000;
+  padding-left: 20px;
+}
+.employee-card img {
+  width: 15vh;
+  height: 15vh;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.employee-info p {
+  font-weight: bold;
+}
+.media i{
+  margin-top: 30px;
+  padding-right: 5px;
+  font-size: 20px;
+
+}
+.media .fa-facebook{
+  color: #007bff;
+}
+.media .fa-linkedin{
+  color: #00346c;
+}
+.media .fa-whatsapp{
+  color: #009917;
+}
+.employee-info span {
+  color: #666;
+}
+.review{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 23px;
+  margin-top: 20%;
+}
+.card-review{
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    width: 150px;
+  height: 80px;
+
+}
+@media (max-width: 1199px) {
+  .ng-container {
+    display: none;
+
+  }
+  .employee-data{
+    margin-top: 10%;
+    margin-left: 25%
+  }
 
 }
