@@ -2,18 +2,31 @@
 <div class="ng-container">
   <a href=""><i class="fa-solid fa-house"></i></a>
   <i class="fa-solid fa-angle-right"></i>
+  <a href=""><span>Home</span></a>
+  <i class="fa-solid fa-angle-right"></i>
   <a href=""><span>Reports</span></a>
 </div>
 <section  class="reports">
-<div  class="report-card col-md-8" >
+<div (click)="toggleSalaryReport('salary')" class="report-card col-md-8"  >
   <a ><strong>Salary Report</strong></a>
   </div>
-<div  class="report-card col-md-8" >
+<div  (click)="toggleLeaveReport('leave')" class="report-card col-md-8" >
   <a ><strong>Leave Report</strong></a>
 </div>
-<div  class="report-card col-md-8" >
+<div  (click)="toggleOvertimeReport('overtime')" class="report-card col-md-8" >
   <a ><strong>Overtime Report</strong></a>
 </div>
+</section>
+<section class="report-table">
+  <app-employee-table  [data]="Salaydata"
+  [columns]="headers" *ngIf="showsalary"></app-employee-table>
+
+  <app-employee-table  [data]="leaveData"
+  [columns]="headerLeave" *ngIf="showleave"></app-employee-table>
+
+  <app-employee-table  [data]="overtimeData"
+  [columns]="headersOvertime" *ngIf="showovertime"></app-employee-table>
+
 </section>
 <app-footer></app-footer>
 

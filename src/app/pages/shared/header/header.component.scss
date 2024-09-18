@@ -52,6 +52,7 @@
   height: 4vh;
   border-radius: 50%;
   margin-right: 5px;
+  cursor: pointer;
 }
 .item2{
   margin:  9px  16px   0px  ;
@@ -63,7 +64,7 @@
   padding-right: 2%;
   background:#D2D2D2;
   transition: left 0.3s;
-  height: 105%;
+  height: 118%;
 }
 
 .sidebar.open {
@@ -93,7 +94,10 @@
   margin-bottom: 25px;
 }
 
+.mb-2{
+  margin-bottom: 2.5rem !important;
 
+}
   .sidebar li{
     list-style: none;
 
@@ -134,7 +138,12 @@
   color: #414141;
   cursor: pointer;
 }
-
+.sub-text{
+  font-size: 16px;
+}
+.sub-text:hover{
+color: #0067b0;
+}
 .textH2{
   position: absolute;
   left: 250px;

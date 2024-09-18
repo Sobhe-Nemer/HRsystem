@@ -2,7 +2,7 @@ import { AfterViewInit, Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from '../shared/footar/footer.component';
 import { HeaderComponent } from "../shared/header/header.component";
-import { Chart } from 'chart.js/auto';
+import { Chart, Colors } from 'chart.js/auto';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import { CalendarOptions } from '@fullcalendar/core';
@@ -102,7 +102,7 @@ export class HomeComponent implements AfterViewInit {
             beginAtZero: true,
             title: {
               display: false,
-              
+
             }
           },
           y: {

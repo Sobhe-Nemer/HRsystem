@@ -55,12 +55,28 @@ h2 {
       font-size: 18px;
     }
   }
+  .report-table{
+    position: relative;
+    margin-top: 16%;
+    right: 4%;
+  }
 @media (max-width: 1199px) {
   .ng-container {
     display: none;
 
   }
+  .report-table{
+    margin-top:29%;
+  }
 
   }
+  @media (max-width: 1000px) {
+
+    .report-table{
+      margin-top:35%;
+    }
+
+    }
+
 
 

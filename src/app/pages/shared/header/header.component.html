@@ -1,15 +1,15 @@
 <header class="header ">
-  <nav class="nav item1">
+  <nav  class="nav item1">
       <i (click)="openSideBar()" class="fa-solid fa-bars icon"></i>
-      <img class="logo" src="../../../assets/logo.png" alt="sfsdfsdf">
-      <h1>HR Sysrem</h1>
+      <img routerLink="/home" class="logo" src="../../../assets/logo.png" alt="sfsdfsdf">
+      <h1 routerLink="/home" >HR Sysrem</h1>
     </nav>
     <div class="nav-item2">
     <div class="item2" ><h3>العربية</h3></div>
     <div class="item3">
       <i class="fa-solid fa-bell icon"></i>
-        <img src="../../../../assets/img1.jpg" alt="" class="profile-img">
-        <a href="">
+        <img routerLink="/profile" src="../../../../assets/img1.jpg" alt="" class="profile-img">
+        <a routerLink="/profile">
           <span>Sobhe Nemer</span>
         </a>
       </div>
@@ -33,7 +33,7 @@
                   @if(isEmployee ){<ul >
                     <li>
                       <a routerLink="/all-employees" class="nav-link">
-                        <span >All Employees</span>
+                        <span class="sub-text">All Employees</span>
                     </a>
                     </li>
 
@@ -47,17 +47,17 @@
                 @if(isLeave){<ul >
                   <li>
                     <a routerLink="/all-leave" class="nav-link">
-                      <span >All Leave</span>
+                      <span class="sub-text" >All Leave</span>
                   </a>
                   </li>
                   <li>
                     <a routerLink="/attendance" class="nav-link">
-                      <span >attendance</span>
+                      <span class="sub-text">attendance</span>
                   </a>
                   </li>
                   <li>
                     <a routerLink="/overtime" class="nav-link">
-                      <span >overtime</span>
+                      <span class="sub-text">overtime</span>
                   </a>
                   </li>
                 </ul>
@@ -71,7 +71,7 @@
                       @if(isRequests ){<ul>
                         <li>
                           <a routerLink="/employees-request" class="nav-link">
-                            <span >Employee Requests</span>
+                            <span class="sub-text">Employee Requests</span>
                         </a>
                         </li>
                       </ul>}
@@ -86,7 +86,7 @@
                 @if(isPayroll ){<ul>
                   <li>
                     <a routerLink="/employees-salary" class="nav-link">
-                      <span >Employees Salary</span>
+                      <span class="sub-text">Employees Salary</span>
                   </a>
                   </li>
                 </ul>}
@@ -100,7 +100,7 @@
       </div>
       <div class="nav-profile">
         <li>
-          <a routerLink="/Profile" class="">
+          <a routerLink="/profile" class="">
               <span><img src="../../../../assets/img1.jpg" alt="" class="profile-img">Profile
               </span><i class="fa-solid fa-angle-right "></i>
             </a>
