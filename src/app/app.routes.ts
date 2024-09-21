@@ -8,11 +8,10 @@ import { AttendanceComponent } from './pages/leave-management/attendance/attenda
 import { OvertimeComponent } from './pages/leave-management/overtime/overtime.component';
 import { EmployeesSalaryComponent } from './pages/Payroll/employees-salary/employees-salary.component';
 import { EmployeeRequestComponent } from './pages/Request-approval/employee-request/employee-request.component';
-import { LandingComponent } from './pages/landing/landing.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { AuthGuard } from './auth.guard';
 import { ReportsComponent } from './pages/reports/reports.component';
-import { CardEmployeeComponent } from './pages/shared/card-employee/card-employee.component';
+import { ResetPasswordComponent } from './auth/forget-passowrd/reset-password/reset-password.component';
 
 
 export const routes: Routes = [
@@ -31,11 +30,6 @@ export const routes: Routes = [
   },
   {
     path: '', redirectTo: '/home', pathMatch: 'full'
-  },
-
-  {
-    path:'landing-page',
-    component:LandingComponent
   },
 
   {
@@ -89,7 +83,9 @@ export const routes: Routes = [
 
   },
   {
-    path:'card-employee',
-    component:CardEmployeeComponent,
+    path: 'resetPassword',
+    component:ResetPasswordComponent
+
   }
+
 ];

@@ -1,30 +1,34 @@
-import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, ViewChild, AfterViewInit, OnInit } from '@angular/core';
 import { HeaderComponent } from "../../shared/header/header.component";
 import { FooterComponent } from '../../shared/footar/footer.component';
 import { EmployeeTableComponent } from "../../shared/employee-table/employee-table.component";
 import { NgClass } from '@angular/common';
+import { RouterLink } from '@angular/router';
+import { EmployeeService } from '../../shared/services/employee.service';
+import { TableService } from '../../shared/services/table.service';
+import { Employee } from '../../shared/models/Employee';
+import { Columns } from '../../shared/models/Columns';
 
 @Component({
   selector: 'app-all-leave',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, EmployeeTableComponent,NgClass],
+  imports: [HeaderComponent, FooterComponent, EmployeeTableComponent,NgClass,RouterLink],
   templateUrl: './all-leave.component.html',
   styleUrls: ['./all-leave.component.scss']
 })
-export class AllLeaveComponent implements AfterViewInit {
+export class AllLeaveComponent implements AfterViewInit,OnInit {
+  ngOnInit():void {
+    this.leaveData=this.employeeServise.getEmployee();
+    this.headerLeave=this.tableService.getColumns('allLeave');
+  }
+constructor(private employeeServise:EmployeeService,private tableService:TableService){
+
+}
+  leaveData:Employee[]=[];
+  headerLeave:Columns[]=[];
+
 
   @ViewChild(HeaderComponent) headerComponent!: HeaderComponent;
-
-  leaveData = [
-    { Employee: ['assets/img1.jpg', 'Sobhe'], typeLeave: 'Annual', email: 'sobhe@example.com', from: '2023-09-01', to: '2023-09-10', reason:"df" },
-    { Employee: ['assets/img1.jpg','sobhe'], typeLeave: 'Annual', email: 'sobhe@example.com', from: '2023-09-01', to: '2023-09-10',reason:"fg" },
-    { Employee: ['assets/img1.jpg', 'sobhe'], typeLeave: 'Annual', email: 'sobhe@example.com', from: '2023-09-01', to: '2023-09-10', reason:"fdgdfg" },
-    { Employee: ['assets/img1.jpg', 'sobhe'], typeLeave: 'Annual', email: 'sobhe@example.com', from: '2023-09-01', to: '2023-09-10', reason:"nm," },
-    { Employee: ['assets/img1.jpg', 'sobhe'], typeLeave: 'Annual', email: 'sobhe@example.com', from: '2023-09-01', to: '2023-09-10', reason:"nm," },
-    { Employee: ['assets/img1.jpg', 'sobhe'], typeLeave: 'Annual', email: 'sobhe@example.com', from: '2023-09-01', to: '2023-09-10', reason:"nm," },
-    { Employee: ['assets/img1.jpg', 'sobhe'], typeLeave: 'Annual', email: 'sobhe@example.com', from: '2023-09-01', to: '2023-09-10', reason:"nm," },
-    { Employee: ['assets/img1.jpg', 'sobhe'], typeLeave: 'Annual', email: 'sobhe@example.com', from: '2023-09-01', to: '2023-09-10', reason:"nm," },
-    ];
 
   paddinggH2 = false;
 

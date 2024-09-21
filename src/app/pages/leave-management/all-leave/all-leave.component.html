@@ -1,14 +1,14 @@
 <app-header [isTitle]="pageTitle"></app-header>
 <div class="ng-container">
-  <a href=""><i class="fa-solid fa-house"></i></a>
+  <a routerLink="/home"><i class="fa-solid fa-house"></i></a>
   <i class="fa-solid fa-angle-right"></i>
-  <a href=""><span>Leave Management</span></a>
+  <a routerLink="/all-leave"><span>Leave Management</span></a>
   <i class="fa-solid fa-angle-right"></i>
-  <a href=""><span>All Leave</span></a>
+  <a routerLink="/all-leave"><span>All Leave</span></a>
 </div>
 <app-employee-table
   [data]="leaveData"
-  [columns]="['Employee', 'typeLeave', 'email', 'from', 'to','reason']"
+  [columns]="headerLeave"
   [actions]="['Approve']"
   (actionEvent)="handleAction($event)">
 </app-employee-table>

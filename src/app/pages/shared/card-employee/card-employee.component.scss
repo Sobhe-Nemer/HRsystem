@@ -104,5 +104,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+  .search-bar input[type="text"] {
+    font-size: 12px;
+
+
+}
 
 }

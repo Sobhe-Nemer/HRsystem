@@ -1,27 +1,46 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from '../shared/footar/footer.component';
 import { HeaderComponent } from "../shared/header/header.component";
-import { Chart, Colors } from 'chart.js/auto';
+import { Chart } from 'chart.js/auto';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import { CalendarOptions } from '@fullcalendar/core';
 import interactionPlugin from '@fullcalendar/interaction';
+import { AllLeaveComponent } from "../leave-management/all-leave/all-leave.component";
+import { EmployeeTableComponent } from "../shared/employee-table/employee-table.component";
+import { Employee } from '../shared/models/Employee';
+import { Columns } from '../shared/models/Columns';
+import { EmployeeService } from '../shared/services/employee.service';
+import { TableService } from '../shared/services/table.service';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterModule, FooterComponent, HeaderComponent,FullCalendarModule],
+  imports: [RouterModule,
+            FooterComponent,
+            HeaderComponent,
+            FullCalendarModule,
+            AllLeaveComponent,
+            EmployeeTableComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent implements AfterViewInit,OnInit {
+  ngOnInit():void {
+    this.leaveData=this.employeeService.getEmployee();
+    this.headerLeave=this.tableService.getColumns('dashboard');
+  }
+constructor(private employeeService:EmployeeService,private tableService:TableService){
+
+}
 
   paddinggH2 = false;
   pageTitle = ["Dashboard"];
   presentCount = 50;
   absentCount = 50;
-
+  leaveData:Employee[]=[];
+    headerLeave:Columns[]=[];
   monthlyOvertime = {
     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
     data: [15, 20, 25, 30, 20, 15, 25, 35, 30, 20, 25, 40]

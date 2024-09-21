@@ -1,8 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HeaderComponent } from '../../shared/header/header.component';
 import { FooterComponent } from '../../shared/footar/footer.component';
 import { RouterModule } from '@angular/router';
 import { EmployeeTableComponent } from '../../shared/employee-table/employee-table.component';
+import { EmployeeService } from '../../shared/services/employee.service';
+import { TableService } from '../../shared/services/table.service';
+import { Employee } from '../../shared/models/Employee';
+import { Columns } from '../../shared/models/Columns';
 
 @Component({
   selector: 'app-employee-request',
@@ -11,14 +15,16 @@ import { EmployeeTableComponent } from '../../shared/employee-table/employee-tab
   templateUrl: './employee-request.component.html',
   styleUrl: './employee-request.component.scss'
 })
-export class EmployeeRequestComponent {
+export class EmployeeRequestComponent implements OnInit {
+  ngOnInit() {
+    this.requestdata=this.employeeService.getEmployee();
+    this.header=this.tableService.getColumns('request')
+  }
+constructor(private employeeService:EmployeeService,private tableService:TableService){
 
-  requestdata = [
-    { Employee: ['assets/img1.jpg', 'Sobhe Nemer'], typeRequest: "promotion request", email: 'sobhe@gmail.com', reason:"df" },
-    { Employee: ['assets/img1.jpg', 'Sobhe Nemer'], typeRequest: "promotion request", email: 'sobhe@gmail.com ', reason:"fg" },
-    { Employee: ['assets/img1.jpg', 'Sobhe Nemer'], typeRequest: "promotion request", email: 'sobhe@gmail.com', reason:"fdgdfg" },
-    { Employee: ['assets/img1.jpg', 'Sobhe Nemer'], typeRequest: "promotion request", email: 'sobhe@gmail.com',  reason:"nm," },
-    ];
+}
+  requestdata :Employee[]= [];
+  header:Columns[]=[];
 
   handleAction(event: { action: string, row: any }) {
     if (event.action === 'Approve') {

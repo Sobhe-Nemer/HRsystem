@@ -1,21 +1,30 @@
-<app-header [isTitle]="pageTitle"></app-header>
+<app-header [isTitle]="pageTitle"  ></app-header>
 <div class="ng-container">
-  <a href=""><i class="fa-solid fa-house"></i></a>
+  <a routerLink="/home"><i class="fa-solid fa-house"></i></a>
+  <i  class="fa-solid fa-angle-right"></i>
+  <a routerLink="/home"><span>Home</span></a>
   <i class="fa-solid fa-angle-right"></i>
-  <a href=""><span>Home</span></a>
-  <i class="fa-solid fa-angle-right"></i>
-  <a href=""><span>Dashboard</span></a>
+  <a routerLink="/home"><span>Dashboard</span></a>
 </div>
-<div routerLink="/attendance" class="piechart">
-  <h3>Daily attendance rate</h3>
-  <canvas id="myPieChart" width="400" height="400"></canvas>
+<section class="dashboard">
+  <div routerLink="/attendance" class="piechart">
+    <h3>Daily attendance rate</h3>
+    <canvas id="myPieChart" width="400" height="400"></canvas>
+  </div>
+  <div class="calendar-container">
+    <h3>Calendar</h3>
+    <full-calendar [options]="calendarOptions"></full-calendar>
 </div>
-<div routerLink="/overtime" class="barChart">
-  <h3>Avg Overtime </h3>
-  <canvas id="myBarChart"  width="400" height="300"></canvas>
+<div class="dashboard-table" >
+  <app-employee-table
+  [data]="leaveData"
+  [columns]="headerLeave"
+  >
+</app-employee-table>
 </div>
-<div class="calendar-container">
-  <h3>Calendar</h3>
-  <full-calendar [options]="calendarOptions"></full-calendar>
-</div>
+  <div routerLink="/overtime" class="barChart">
+    <h3>Avg Overtime </h3>
+    <canvas id="myBarChart"  width="400" height="300"></canvas>
+  </div>
+</section>
 <app-footer></app-footer>
