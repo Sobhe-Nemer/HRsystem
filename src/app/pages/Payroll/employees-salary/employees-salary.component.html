@@ -1,11 +1,16 @@
 <app-header [isTitle]="pageTitle"></app-header>
 <div class="ng-container">
+  <app-salary-modal></app-salary-modal>
   <a routerLink="/home"><i class="fa-solid fa-house"></i></a>
   <i class="fa-solid fa-angle-right"></i>
   <a routerLink="/employees-salary"><span>Payroll</span></a>
   <i class="fa-solid fa-angle-right"></i>
   <a routerLink="/employees-salary"><span>Employees Salary</span></a>
 </div>
+
 <app-employee-table [data]="Salaydata"
-[columns]="headerSalary"></app-employee-table>
+[columns]="headerSalary"
+[edits]="['Edit']"
+  (editEvent)="onEditClick($event)"></app-employee-table>
+
 <app-footer></app-footer>

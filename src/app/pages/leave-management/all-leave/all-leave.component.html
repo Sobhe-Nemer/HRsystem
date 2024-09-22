@@ -6,6 +6,13 @@
   <i class="fa-solid fa-angle-right"></i>
   <a routerLink="/all-leave"><span>All Leave</span></a>
 </div>
+<div class="leave-modal">
+  <button (click)="addModal()" class="btn-modal"> Add Leave</button>
+</div>
+  @if (showModal ) {
+    <app-leave-modal></app-leave-modal>
+    }
+
 <app-employee-table
   [data]="leaveData"
   [columns]="headerLeave"

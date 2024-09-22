@@ -37,8 +37,8 @@ constructor(private employeeService:EmployeeService,private tableService:TableSe
 
   paddinggH2 = false;
   pageTitle = ["Dashboard"];
-  presentCount = 50;
-  absentCount = 50;
+  presentCount = 70;
+  absentCount = 30;
   leaveData:Employee[]=[];
     headerLeave:Columns[]=[];
   monthlyOvertime = {

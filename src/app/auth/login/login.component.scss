@@ -83,3 +83,8 @@ h1 {
   color:black;
 }
 
+
+::ng-deep .footer {
+  margin-bottom: 120px;
+  top: 109%;
+}

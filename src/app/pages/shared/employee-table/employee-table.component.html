@@ -3,6 +3,7 @@
   <input type="text" placeholder="Employee ID">
   <input type="text" placeholder="Employee Name">
   <button>Search</button>
+
 </div>
 <div class="table-container">
 <table  class="table table-striped">
@@ -22,8 +23,13 @@
         <td *ngIf="column.key !== 'employee'">{{ row[column.key] }}</td>
       </ng-container>
       <td *ngIf="actions.length">
-        <button *ngFor="let action of actions" (click)="onActionClick(action, row)">
+        <button class="btn-Approve" *ngFor="let action of actions" (click)="onActionClick(action, row)">
           <i class="fa-solid fa-circle"></i>{{ action }}
+        </button>
+      </td>
+      <td *ngIf="edits.length">
+        <button  class="btn-edit" *ngFor="let edit of edits" (click)="onEditClick(edit, row)">
+          {{ edit }}
         </button>
       </td>
     </tr>

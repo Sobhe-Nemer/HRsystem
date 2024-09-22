@@ -8,11 +8,12 @@ import { EmployeeService } from '../../shared/services/employee.service';
 import { TableService } from '../../shared/services/table.service';
 import { Employee } from '../../shared/models/Employee';
 import { Columns } from '../../shared/models/Columns';
+import { LeaveModalComponent } from '../../shared/modals/leave-modal/leave-modal.component';
 
 @Component({
   selector: 'app-all-leave',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, EmployeeTableComponent,NgClass,RouterLink],
+  imports: [HeaderComponent, FooterComponent, EmployeeTableComponent,NgClass,RouterLink,LeaveModalComponent],
   templateUrl: './all-leave.component.html',
   styleUrls: ['./all-leave.component.scss']
 })
@@ -29,7 +30,10 @@ constructor(private employeeServise:EmployeeService,private tableService:TableSe
 
 
   @ViewChild(HeaderComponent) headerComponent!: HeaderComponent;
-
+  showModal=false;
+  addModal(){
+    this.showModal=!this.showModal;
+  }
   paddinggH2 = false;
 
   ngAfterViewInit() {
@@ -46,5 +50,6 @@ constructor(private employeeServise:EmployeeService,private tableService:TableSe
     }
   }
   pageTitle=["All Leave "];
+
 
 }

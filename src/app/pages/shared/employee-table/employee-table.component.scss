@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 35%;
+  top: 40%;
   left: 20%;
   width: 73%;
 
@@ -97,7 +97,8 @@ table td img {
   height: 40px;
   margin-right: 10px;
 }
-table button
+
+table .btn-Approve
 {
 border-radius: 20px;
 align-items: center;
@@ -107,7 +108,16 @@ i{
   color: green;
 }
 }
-
+.btn-edit{
+  border-radius: 20px;
+  align-items: center;
+  border: none;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(209, 0, 0);
+  color: #ccc;
+  width: 50%;
+  }
 
 @media (max-width:1200px) {
   .employee-section{

@@ -1,4 +1,3 @@
-import { S } from "@fullcalendar/core/internal-common";
 
 export interface Employee{
   employee:string[];

@@ -6,6 +6,12 @@
   <i class="fa-solid fa-angle-right"></i>
   <a routerLink="/employees-request"><span>Employee Request</span></a>
 </div>
+<div class="request-modal">
+  <button (click)="addModal()" class="btn-modal"> Add Request</button>
+</div>
+  @if (showModal ) {
+    <app-request-modal></app-request-modal>
+  }
 <app-employee-table
 [data]="requestdata"
   [columns]="header"
@@ -13,3 +19,5 @@
   (actionEvent)="handleAction($event)">
 </app-employee-table>
 <app-footer></app-footer>
+
+

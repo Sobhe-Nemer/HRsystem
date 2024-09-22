@@ -49,6 +49,7 @@
 .search-bar button:hover {
   background-color: #0056b3;
 }
+
 .employee-cards {
     position: relative;
     display: grid;
@@ -110,4 +111,11 @@
 
 }
 
+}
+.modal{
+  z-index: 1050;
+}
+a{
+  text-decoration: none;
+  color: black;
 }

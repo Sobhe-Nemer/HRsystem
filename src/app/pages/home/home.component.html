@@ -15,7 +15,7 @@
     <h3>Calendar</h3>
     <full-calendar [options]="calendarOptions"></full-calendar>
 </div>
-<div class="dashboard-table" >
+<div class="dashboard-table" routerLink="/all-leave"  >
   <app-employee-table
   [data]="leaveData"
   [columns]="headerLeave"

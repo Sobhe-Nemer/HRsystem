@@ -1,5 +1,5 @@
 import { NgClass, NgFor, NgIf, } from '@angular/common';
-import { Component,Input,Output,EventEmitter, input } from '@angular/core';
+import { Component,Input,Output,EventEmitter } from '@angular/core';
 import { Columns } from '../models/Columns';
 
 @Component({
@@ -13,11 +13,15 @@ export class EmployeeTableComponent {
   @Input() data: any[] = [];
   @Input() columns: Columns[] = [];
   @Input() actions: string[] = [];
+  @Input( ) edits:string[]=[];
 
   @Output() actionEvent = new EventEmitter<{ action: string, row: any }>();
+  @Output() editEvent = new EventEmitter<{ edit: string, row: any }>();
 
   onActionClick(action: string, row: any) {
     this.actionEvent.emit({ action, row });
   }
-
+  onEditClick(edit: string, row: any) {
+    this.editEvent.emit({ edit, row });
+  }
 }

@@ -26,6 +26,36 @@ h2 {
   margin-top: 4px;
 
 }
+.request-modal{
+  position: absolute;
+  display: flex;
+  top: 30%;
+  height: 50px;
+  width: 100%;
+  justify-content: end;
+  padding-right: 10%;
+}
+.btn-modal{
+  background-color: #045E9D;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  border-radius: 20px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  width: 15%;
+  margin-left: 60px;
+  justify-content: center;
+
+}
+
+.btn-modal:hover {
+  background-color: #0056b3;
+
+}
 @media (max-width: 1199px) {
   .ng-container {
     display: none;

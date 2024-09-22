@@ -7,11 +7,12 @@ import { EmployeeService } from '../../shared/services/employee.service';
 import { Employee } from '../../shared/models/Employee';
 import { TableService } from '../../shared/services/table.service';
 import { Columns } from '../../shared/models/Columns';
+import { SalaryModalComponent } from '../../shared/modals/salary-modal/salary-modal.component';
 
 @Component({
   selector: 'app-employees-salary',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, EmployeeTableComponent,RouterLink],
+  imports: [HeaderComponent, FooterComponent, EmployeeTableComponent,RouterLink,SalaryModalComponent],
   templateUrl: './employees-salary.component.html',
   styleUrl: './employees-salary.component.scss'
 })
@@ -27,4 +28,9 @@ export class EmployeesSalaryComponent implements OnInit {
   Salaydata:Employee[] = [];
   headerSalary:Columns[]=[];
   pageTitle=["Employees Salary"];
+  onEditClick(event: { edit: string, row: any }) {
+    if (event.edit === 'Edit') {
+      console.log('edit clicked');
+    }
+  }
 }

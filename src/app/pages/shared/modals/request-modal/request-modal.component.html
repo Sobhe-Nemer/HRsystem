@@ -1,0 +1,63 @@
+<div class="modal-overlay" *ngIf="isVisible">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title">Add Employee</h5>
+      <button class="close" (click)="close()"><i class="fa-regular fa-circle-xmark"></i></button>
+    </div>
+    <div class="modal-body">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">First Name</span>
+        </div>
+        <input type="text" class="form-control" placeholder="First Name">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Last Name</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Last Name">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Email</span>
+        </div>
+        <input type="email" class="form-control" placeholder="Email">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Country</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Country">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Birthday</span>
+        </div>
+        <input type="date" class="form-control" placeholder="Birthday">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Salary</span>
+        </div>
+        <input type="number" class="form-control" placeholder="Salary">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Mobile Phone</span>
+        </div>
+        <input type="tel" class="form-control" placeholder="Mobile Phone">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Position</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Position">
+      </div>
+
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" (click)="close()">Close</button>
+      <button class="btn btn-primary" (click)="close()">Request</button>
+    </div>
+  </div>
+</div>
