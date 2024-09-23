@@ -1,4 +1,3 @@
-
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -14,62 +13,81 @@
 
 .modal-content {
   background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 500px;
-  padding: 20px;
-  position: relative;
+  max-width: 600px;
+  padding: 30px;
 }
 
 .modal-header {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.modal-title {
-  margin: 0;
+.input-group {
+  margin-bottom: 20px;
 }
+
+.input-group-text {
+  background: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+
+.form-control {
+  border-radius: 0 5px 5px 0;
+  border: 1px solid #ccc;
+  padding: 10px; }
+
+textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px; }
+
+.btn-primary,
+.btn-secondary {
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+.checkbox-group {
+    position: relative;
+    left: 20px;
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.checkbox-group label {
+  margin-left: 5px;
+  cursor: pointer;
+  font-size: 16px;}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 8px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.btn-primary {
+  transition: background-color 0.3s;
+  margin-left: 10px;
+  border-radius: 10px;
+}
+
+.btn-primary:hover {
+  background-color: #004080; }
 
 .close {
-  background: none;
+  background-color: white;
   border: none;
-  font-size: 20px;
-  cursor: pointer;
 }
 
-.modal-body {
-  margin-top: 10px;
-}
-
-.modal-footer {
-  display: flex;
-  justify-content: flex-end;
-}
-button i
-{
-  color: red;
-}
-
-.btn-primary{
-  background-color: #045E9D;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  border-radius: 20px;
-  height: 40px;
-  display: flex;
-  margin-left: 5px;
-}
-.btn-secondary{
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  border-radius: 20px;
-  height: 40px;
-  display: flex;
-}
-.btn-primary:hover {
-  background-color: #0056b3;
+.close:hover {
+  color:RED;
+  border-radius:50%;
 }

@@ -1,9 +1,11 @@
 
 export interface Employee{
+  id?:number;
   employee:string[];
-  salary:string;
-  email:string;
+  salary?:string;
+  email?:string;
   img?:string;
+  position?:string;
   overtimeDay?:String;
   overtimeMonth?:String;
   totalovertime?:string;
@@ -23,4 +25,5 @@ export interface Employee{
   typeLeave?:string;
   typeRequest?:string;
   approved?:string;
+
 }

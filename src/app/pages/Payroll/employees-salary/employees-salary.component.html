@@ -7,6 +7,7 @@
   <i class="fa-solid fa-angle-right"></i>
   <a routerLink="/employees-salary"><span>Employees Salary</span></a>
 </div>
+<app-salary-modal [isVisible]="isModalVisible" (close)="closeModal()"></app-salary-modal>
 
 <app-employee-table [data]="Salaydata"
 [columns]="headerSalary"

@@ -17,20 +17,26 @@ import { SalaryModalComponent } from '../../shared/modals/salary-modal/salary-mo
   styleUrl: './employees-salary.component.scss'
 })
 export class EmployeesSalaryComponent implements OnInit {
+  Salaydata: Employee[] = [];
+  headerSalary: Columns[] = [];
+  pageTitle = ["Employees Salary"];
+  isModalVisible = false;
+
+  constructor(private employeeServcie: EmployeeService, private tableService: TableService) {}
 
   ngOnInit(): void {
-    this.Salaydata = this.employeeServcie.getEmployee()
-    this.headerSalary = this.tableService.getColumns('employee-salary')
+    this.Salaydata = this.employeeServcie.getEmployee();
+    this.headerSalary = this.tableService.getColumns('employee-salary');
   }
-  constructor(private employeeServcie:EmployeeService,private tableService:TableService){
 
-  }
-  Salaydata:Employee[] = [];
-  headerSalary:Columns[]=[];
-  pageTitle=["Employees Salary"];
-  onEditClick(event: { edit: string, row: any }) {
+  onEditClick(event: { edit: string; row: any }) {
     if (event.edit === 'Edit') {
       console.log('edit clicked');
+      this.isModalVisible = true;
     }
+  }
+
+  closeModal() {
+    this.isModalVisible = false;
   }
 }

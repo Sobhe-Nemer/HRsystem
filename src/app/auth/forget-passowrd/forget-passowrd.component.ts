@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FooterComponent } from '../../pages/shared/footar/footer.component';
-import { RouterModule } from '@angular/router';
+import { RouterModule,Router } from '@angular/router';
 
 @Component({
   selector: 'app-forget-passowrd',
@@ -11,4 +11,5 @@ import { RouterModule } from '@angular/router';
 })
 export class ForgetPassowrdComponent {
 
+  
 }

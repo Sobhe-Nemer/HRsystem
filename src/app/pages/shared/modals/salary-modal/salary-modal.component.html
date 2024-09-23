@@ -2,16 +2,32 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <h5 class="modal-title">Edit Salary</h5>
+        <button type="button" class="close" (click)="closeModal()" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <p>Modal body text goes here.</p>
-      </div>
+        <div class="input-group">
+          <span class="input-group-text">Employee:</span>
+          <input type="text" class="form-control" placeholder="Sobhe Nemer" >
+
+        </div>
+        <div class="input-group">
+          <span class="input-group-text">Email:</span>
+          <input type="text" class="form-control" placeholder="sobhe@gmail.com" >
+
+        </div>
+        <div class="input-group">
+          <span class="input-group-text"> Salary:</span>
+          <input type="text" class="form-control" placeholder="500" >
+        </div>
+        <div class="input-group">
+          <span class="input-group-text">New Salary:</span>
+          <input type="text" class="form-control" >
+        </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary"  (click)="close()">Save changes</button>
+        <button type="button" class="btn btn-primary" (click)="closeModal()">Save changes</button>
       </div>
     </div>
   </div>

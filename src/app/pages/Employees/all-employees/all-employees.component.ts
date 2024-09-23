@@ -3,6 +3,9 @@ import { RouterModule  } from '@angular/router';
 import { FooterComponent } from '../../shared/footar/footer.component';
 import { HeaderComponent } from '../../shared/header/header.component';
 import { CardEmployeeComponent } from "../../shared/card-employee/card-employee.component";
+import { Employee } from '../../shared/models/Employee';
+import { TableService } from '../../shared/services/table.service';
+import { EmployeeService } from '../../shared/services/employee.service';
 
 @Component({
   selector: 'app-all-employees',
@@ -11,23 +14,16 @@ import { CardEmployeeComponent } from "../../shared/card-employee/card-employee.
   templateUrl: './all-employees.component.html',
   styleUrl: './all-employees.component.scss'
 })
-export class AllEmployeesComponent  {
+export class AllEmployeesComponent implements OnInit {
+ngOnInit():void {
+  this.profileData=this.employeeServise.getEmployee();
+  
+}
+constructor(private employeeServise:EmployeeService,private tableService:TableService){
 
-  profileData=[
-    {img:'../../../../assets/img1.jpg',name:'Sobhe Nemer',position:'developer'},
-    {img:'../../../../assets/img1.jpg',name:'Sobhe Nemer',position:'developer'},
-    {img:'../../../../assets/img1.jpg',name:'Sobhe Nemer',position:'developer'},
-    {img:'../../../../assets/img1.jpg',name:'Sobhe Nemer',position:'developer'},
-    {img:'../../../../assets/img1.jpg',name:'Sobhe Nemer',position:'developer'},
-    {img:'../../../../assets/img1.jpg',name:'Sobhe Nemer',position:'developer'},
-    {img:'../../../../assets/img1.jpg',name:'Sobhe Nemer',position:'developer'},
-    {img:'../../../../assets/img1.jpg',name:'Sobhe Nemer',position:'developer'},
-    {img:'../../../../assets/img1.jpg',name:'Sobhe Nemer',position:'developer'},
-    {img:'../../../../assets/img1.jpg',name:'Sobhe Nemer',position:'developer'},
-    {img:'../../../../assets/img1.jpg',name:'Sobhe Nemer',position:'developer'},
-    {img:'../../../../assets/img1.jpg',name:'Sobhe Nemer',position:'developer'},
+}
 
-  ];
+  profileData:Employee[]=[];
   pageTitle=["All Employee"];
 
 

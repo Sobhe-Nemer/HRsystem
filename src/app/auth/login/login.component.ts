@@ -12,8 +12,19 @@ import { FooterComponent } from '../../pages/shared/footar/footer.component';
 export class LoginComponent {
   constructor(private router: Router) {}
 
-  login() {
-    localStorage.setItem('LoggedIn', 'true');
-    this.router.navigate(['/home']);
+
+login() {
+  const email = (document.querySelector('input[type="email"]') as HTMLInputElement).value;
+  const password = (document.querySelector('input[type="password"]') as HTMLInputElement).value;
+
+  if (!email || !password) {
+
+    return;
   }
+
+  localStorage.setItem('LoggedIn', 'true');
+  this.router.navigate(['/home']);
 }
+
+}
+

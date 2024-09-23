@@ -1,22 +1,22 @@
 <section class="container">
-<div class="search-bar">
-  <input type="text" placeholder="Employee ID">
-  <input type="text" placeholder="Employee Name">
-  <button ><i class="fa-solid fa-magnifying-glass"></i>Search</button>
-  <button (click)="addModal()"><i class="fa-solid fa-plus"></i>Add employee</button>
-    </div>
-    @if (showModal ) {
-    <app-add-modal></app-add-modal>
-    }
-<section class="employee-cards" >
-  <div *ngFor="let data of data" class="employee-card" >
-    <a routerLink="/profiles">
-      <img  [src]="[data.img]" alt="Sobhe Nemer">
-      <div class="employee-info">
-          <p>{{data.name}}</p>
-          <span>{{data.position}}</span>
-      </div>
-    </a>
+  <div class="search-bar">
+    <input type="text" placeholder="Employee Name" [(ngModel)]="searchName">
+    <input type="text" placeholder="Employee position" [(ngModel)]="searchPosition">
+    <button (click)="search()"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+    <button (click)="addModal()"><i class="fa-solid fa-plus"></i>Add employee</button>
   </div>
-</section>
+
+  <app-add-modal *ngIf="showModal"></app-add-modal>
+
+  <section class="employee-cards">
+    <div *ngFor="let data of fillterData" class="employee-card">
+      <a routerLink="/profiles">
+        <img [src]="data.employee[0]" alt="{{ data.employee[1] }}">
+        <div class="employee-info">
+          <p>{{ data.employee[1] }}</p>
+          <span>{{ data.position }}</span>
+        </div>
+      </a>
+    </div>
+  </section>
 </section>

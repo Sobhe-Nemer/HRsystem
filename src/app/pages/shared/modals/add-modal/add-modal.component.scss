@@ -26,6 +26,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .modal-title {
@@ -72,4 +74,13 @@ button i
 }
 .btn-primary:hover {
   background-color: #0056b3;
+}
+.close {
+  background-color: #fff;
+  border: none;
+}
+
+.close:hover {
+  color:RED;
+  border-radius:50%;
 }
