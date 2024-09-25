@@ -3,9 +3,9 @@
   <app-salary-modal></app-salary-modal>
   <a routerLink="/home"><i class="fa-solid fa-house"></i></a>
   <i class="fa-solid fa-angle-right"></i>
-  <a routerLink="/employees-salary"><span>Payroll</span></a>
+  <a routerLink="/employees-salary"><span>{{'payroll' | translate}}</span></a>
   <i class="fa-solid fa-angle-right"></i>
-  <a routerLink="/employees-salary"><span>Employees Salary</span></a>
+  <a routerLink="/employees-salary"><span>{{'employees_salary' | translate}}</span></a>
 </div>
 <app-salary-modal [isVisible]="isModalVisible" (close)="closeModal()"></app-salary-modal>
 

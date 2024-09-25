@@ -1,12 +1,13 @@
-import { NgClass } from '@angular/common';
+import { NgClass, NgIf } from '@angular/common';
 import { Component ,Input} from '@angular/core';
 import {  RouterModule,Router } from '@angular/router';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [NgClass,RouterModule],
+  imports: [NgClass,RouterModule,NgIf,TranslateModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
@@ -47,10 +48,27 @@ payroll(){
     this.isRequests=false;
 }
 @Input() isTitle : string[]=[];
-constructor(private router: Router) {}
+
+isDropdownOpen = false;
+selectedLanguage: string = 'English';
+
+constructor(private router: Router,private translate: TranslateService) {
+  translate.addLangs(['en', 'ar']);
+  translate.setDefaultLang('en');
+    }
+    switchLanguage(lang: string) {
+     // this.translate.use(lang);
+      this.isDropdownOpen = false;
+        this.selectedLanguage = lang === 'en' ? 'English' : 'العربية';
+    }
+    toggleDropdown() {
+    this.isDropdownOpen = !this.isDropdownOpen;
+    }
+
   logout() :void{
     localStorage.removeItem('LoggedIn');
     this.router.navigate(["/login"]);
 
   }
+
 }

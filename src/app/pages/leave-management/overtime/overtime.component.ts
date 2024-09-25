@@ -7,11 +7,12 @@ import { EmployeeService } from '../../shared/services/employee.service';
 import { TableService } from '../../shared/services/table.service';
 import { Employee } from '../../shared/models/Employee';
 import { Columns } from '../../shared/models/Columns';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-overtime',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, EmployeeTableComponent,RouterLink],
+  imports: [HeaderComponent, FooterComponent,TranslateModule, EmployeeTableComponent,RouterLink],
   templateUrl: './overtime.component.html',
   styleUrl: './overtime.component.scss'
 })

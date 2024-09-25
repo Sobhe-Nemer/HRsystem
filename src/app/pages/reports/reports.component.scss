@@ -13,6 +13,24 @@ h2 {
   margin-top: 3%;
 }
 
+.IsSalary {
+  border-bottom: 5px solid #9f9f9f;
+  border-bottom-right-radius: 20%;
+  border-bottom-left-radius: 20%;
+  padding-bottom: 5px;
+}
+.IsLeave {
+  border-bottom: 5px solid #9f9f9f;
+  border-bottom-right-radius: 20%;
+  border-bottom-left-radius: 20%;
+  padding-bottom: 5px;
+}
+.IsOvertime {
+    border-bottom: 5px solid #9f9f9f;
+    border-bottom-right-radius: 20%;
+    border-bottom-left-radius: 20%;
+    padding-bottom: 5px;
+  }
 
 .ng-container .fa-house,
 .ng-container a {

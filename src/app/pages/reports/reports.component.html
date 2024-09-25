@@ -2,24 +2,25 @@
 <div class="ng-container">
   <a routerLink="/home"><i class="fa-solid fa-house"></i></a>
   <i class="fa-solid fa-angle-right"></i>
-  <a routerLink="/home"><span>Home</span></a>
+  <a routerLink="/home"><span>{{'home' | translate}}</span></a>
   <i class="fa-solid fa-angle-right"></i>
-  <a routerLink="/reports"><span>Reports</span></a>
+  <a routerLink="/reports"><span>{{'reports' | translate}}</span></a>
 </div>
 <section  class="reports">
-<div (click)="toggleSalaryReport('salary')" class="report-card col-md-8"  >
-  <a ><strong>Salary Report</strong></a>
+<div (click)="toggleSalaryReport('salary')" class="report-card col-md-8" >
+  <a [class.IsSalary]="showsalary" ><strong >{{'salary_report' | translate}}</strong></a>
   </div>
 <div  (click)="toggleLeaveReport('leave')" class="report-card col-md-8" >
-  <a ><strong>Leave Report</strong></a>
+  <a [class.IsLeave]="showleave"><strong>{{'leave_report' | translate}}</strong></a>
 </div>
 <div  (click)="toggleOvertimeReport('overtime')" class="report-card col-md-8" >
-  <a ><strong>Overtime Report</strong></a>
+  <a [class.IsOvertime]="showovertime"><strong>{{'overtime_report' | translate}}</strong></a>
 </div>
 </section>
 <section class="report-table">
-  <app-employee-table  [data]="Salaydata"
-  [columns]="headerSalary" *ngIf="showsalary"></app-employee-table>
+
+    <app-employee-table  [data]="Salaydata"
+  [columns]="headerSalary" *ngIf="showsalary" ></app-employee-table>
 
   <app-employee-table  [data]="leaveData"
   [columns]="headerLeave" *ngIf="showleave"></app-employee-table>

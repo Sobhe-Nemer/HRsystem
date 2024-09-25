@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import {  RouterModule,Router } from '@angular/router';
 import { FooterComponent } from '../../pages/shared/footar/footer.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [RouterModule, FooterComponent ],
+  imports: [RouterModule, FooterComponent,TranslateModule ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })

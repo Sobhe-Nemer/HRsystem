@@ -2,12 +2,12 @@
 <div class="ng-container">
   <a routerLink="/home"><i class="fa-solid fa-house"></i></a>
   <i class="fa-solid fa-angle-right"></i>
-  <a routerLink="/employees-request"><span>Requests approval</span></a>
+  <a routerLink="/employees-request"><span>{{'requests_approval' | translate}}</span></a>
   <i class="fa-solid fa-angle-right"></i>
-  <a routerLink="/employees-request"><span>Employee Request</span></a>
+  <a routerLink="/employees-request"><span>{{'employee_requests' | translate}}</span></a>
 </div>
 <div class="request-modal">
-  <button (click)="addModal()" class="btn-modal"> Add Request</button>
+  <button (click)="addModal()" class="btn-modal">{{'add_request' | translate}}</button>
 </div>
   @if (showModal ) {
     <app-request-modal></app-request-modal>

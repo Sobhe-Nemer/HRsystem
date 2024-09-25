@@ -2,7 +2,8 @@
   <div class="search-bar">
     <input type="text" placeholder="Employee ID" [(ngModel)]="searchEmployeeId">
     <input type="text" placeholder="Employee Name" [(ngModel)]="searchEmployeeName">
-    <button (click)="search()">Search</button>
+    <button (click)="search()"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+    <button (click)="clear()" class="clear"><i class="fa-solid fa-trash-can " style="color: #fff;"></i></button>
   </div>
 
   <div class="table-container">

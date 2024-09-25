@@ -8,11 +8,12 @@ import { TableService } from '../../shared/services/table.service';
 import { Employee } from '../../shared/models/Employee';
 import { Columns } from '../../shared/models/Columns';
 import { RequestModalComponent } from '../../shared/modals/request-modal/request-modal.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-employee-request',
   standalone: true,
-  imports: [RouterModule, FooterComponent, HeaderComponent,EmployeeTableComponent,RequestModalComponent],
+  imports: [RouterModule, FooterComponent, TranslateModule,HeaderComponent,EmployeeTableComponent,RequestModalComponent],
   templateUrl: './employee-request.component.html',
   styleUrl: './employee-request.component.scss'
 })

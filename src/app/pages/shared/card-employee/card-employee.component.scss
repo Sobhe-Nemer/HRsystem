@@ -26,6 +26,30 @@
     width: 35%;
 
 }
+.search-bar .clear{
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  border-radius: 20px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  width: 10%;
+  margin-left: 0px;
+  justify-content: center;
+i{
+  color: #fff;
+  font-size: 19px;
+  padding-top: 3px;
+  padding-left: 7px; }
+
+}
+.search-bar .clear:hover{
+  background-color: rgb(241, 23, 23);
+}
 
 .search-bar button {
   background-color: #045E9D;

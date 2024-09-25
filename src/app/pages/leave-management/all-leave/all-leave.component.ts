@@ -9,11 +9,12 @@ import { TableService } from '../../shared/services/table.service';
 import { Employee } from '../../shared/models/Employee';
 import { Columns } from '../../shared/models/Columns';
 import { LeaveModalComponent } from '../../shared/modals/leave-modal/leave-modal.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-all-leave',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, EmployeeTableComponent,NgClass,RouterLink,LeaveModalComponent],
+  imports: [HeaderComponent, FooterComponent, TranslateModule,EmployeeTableComponent,NgClass,RouterLink,LeaveModalComponent],
   templateUrl: './all-leave.component.html',
   styleUrls: ['./all-leave.component.scss']
 })

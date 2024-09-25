@@ -2,9 +2,9 @@
 <div class="ng-container">
   <a routerLink="/home"><i class="fa-solid fa-house"></i></a>
   <i class="fa-solid fa-angle-right"></i>
-  <a routerLink="/all-leave"><span>Leave Management</span></a>
+  <a routerLink="/all-leave"><span>{{'leave_management' | translate}}</span></a>
   <i class="fa-solid fa-angle-right"></i>
-  <a routerLink="/attendance"><span>Attendance</span></a>
+  <a routerLink="/attendance"><span>{{'attendance' | translate}}</span></a>
 </div>
 <app-employee-table [data]="attendanceData"
 [columns]="headers">

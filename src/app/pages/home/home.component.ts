@@ -13,6 +13,7 @@ import { Employee } from '../shared/models/Employee';
 import { Columns } from '../shared/models/Columns';
 import { EmployeeService } from '../shared/services/employee.service';
 import { TableService } from '../shared/services/table.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
@@ -22,7 +23,7 @@ import { TableService } from '../shared/services/table.service';
             HeaderComponent,
             FullCalendarModule,
             AllLeaveComponent,
-            EmployeeTableComponent],
+            EmployeeTableComponent,TranslateModule],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })

@@ -3,11 +3,11 @@
     <input type="text" placeholder="Employee Name" [(ngModel)]="searchName">
     <input type="text" placeholder="Employee position" [(ngModel)]="searchPosition">
     <button (click)="search()"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+    <button (click)="clear()" class="clear"><i class="fa-solid fa-trash-can"></i></button>
     <button (click)="addModal()"><i class="fa-solid fa-plus"></i>Add employee</button>
   </div>
 
   <app-add-modal *ngIf="showModal"></app-add-modal>
-
   <section class="employee-cards">
     <div *ngFor="let data of fillterData" class="employee-card">
       <a routerLink="/profiles">

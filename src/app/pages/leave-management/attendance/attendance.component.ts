@@ -8,10 +8,11 @@ import { EmployeeService } from '../../shared/services/employee.service';
 import { TableService } from '../../shared/services/table.service';
 import { Employee } from '../../shared/models/Employee';
 import { Columns } from '../../shared/models/Columns';
+import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-attendance',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, NgClass, EmployeeTableComponent,RouterLink],
+  imports: [HeaderComponent, FooterComponent,TranslateModule, NgClass, EmployeeTableComponent,RouterLink],
   templateUrl: './attendance.component.html',
   styleUrl: './attendance.component.scss'
 })

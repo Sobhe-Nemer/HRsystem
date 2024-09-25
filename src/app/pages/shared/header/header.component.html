@@ -4,13 +4,23 @@
       <img routerLink="/home" class="logo" src="../../../assets/logo.png" alt="sfsdfsdf">
       <h1 routerLink="/home" >HR Sysrem</h1>
     </nav>
-    <div class="nav-item2">
-    <div class="item2" ><h3>العربية</h3></div>
+    <div class="item2" >
+      <h3 (click)="toggleDropdown()">{{ selectedLanguage }}</h3>
+      <div *ngIf="isDropdownOpen" class="dropdown">
+          <ul>
+            <li (click)="switchLanguage('en')">
+              <i class="fa-solid fa-flag-usa" style="color: #aa0600;"></i> English
+          </li>
+          <li (click)="switchLanguage('ar')">
+              <i class="fa fa-flag" style="color: #177f03;"></i> العربية
+          </li>
+          </ul>
+      </div>
     <div class="item3">
       <i class="fa-solid fa-bell icon"></i>
         <img routerLink="/profile" src="../../../../assets/img1.jpg" alt="" class="profile-img">
         <a routerLink="/profile">
-          <span>Sobhe Nemer</span>
+          <span>{{ 'profile' | translate }}</span>
         </a>
       </div>
     </div>
@@ -20,20 +30,20 @@
       <div class="menu" >
               <li title="Dashboard" class="menu-item mb-2">
                   <a routerLink="/home" class="nav-link">
-                      <span class="text nav-text">Dashboard</span>
+                      <span class="text nav-text">{{'dashboard' | translate }}</span>
                       <i class="fa-solid fa-angle-right"></i>
                   </a>
 
               </li>
               <li (click)="Employee()"   title="Employees" class="menu-item mb-2">
                   <div class="nav-mainItem ">
-                      <span class="text nav-text">Employees</span>
+                      <span class="text nav-text">{{ 'employees' | translate }}</span>
                       <i class="fa-solid fa-angle-right"></i>
                   </div>
                   @if(isEmployee ){<ul >
                     <li>
                       <a routerLink="/all-employees" class="nav-link">
-                        <span class="sub-text">All Employees</span>
+                        <span class="sub-text">{{ 'all_employees' | translate }}</span>
                     </a>
                     </li>
 
@@ -41,23 +51,23 @@
               </li>
             <li (click)="Leave()"   title="Leave management" class="menu-item mb-2">
                 <div class="nav-mainItem ">
-                    <span class="text nav-text">Leave management</span>
+                    <span class="text nav-text">{{ 'leave_management' | translate }}</span>
                     <i class="fa-solid fa-angle-right"></i>
                 </div>
                 @if(isLeave){<ul >
                   <li>
                     <a routerLink="/all-leave" class="nav-link">
-                      <span class="sub-text" >All Leave</span>
+                      <span class="sub-text" >{{ 'all_leave' | translate }}</span>
                   </a>
                   </li>
                   <li>
                     <a routerLink="/attendance" class="nav-link">
-                      <span class="sub-text">attendance</span>
+                      <span class="sub-text">{{ 'attendance' | translate }}</span>
                   </a>
                   </li>
                   <li>
                     <a routerLink="/overtime" class="nav-link">
-                      <span class="sub-text">overtime</span>
+                      <span class="sub-text">{{ 'overtime' | translate }}</span>
                   </a>
                   </li>
                 </ul>
@@ -65,13 +75,13 @@
               </li>
               <li  (click)="Requests()" title=" Requests approval" class="menu-item mb-2">
                   <div class="nav-mainItem ">
-                      <span class="text nav-text"> Requests approval</span>
+                      <span class="text nav-text">{{ 'requests_approval' | translate }}</span>
                       <i class="fa-solid fa-angle-right"></i>
                   </div>
                       @if(isRequests ){<ul>
                         <li>
                           <a routerLink="/employees-request" class="nav-link">
-                            <span class="sub-text">Employee Requests</span>
+                            <span class="sub-text">{{ 'employee_requests' | translate }}</span>
                         </a>
                         </li>
                       </ul>}
@@ -79,21 +89,21 @@
               </li>
               <li (click)="payroll()"  title=" Payroll" class="menu-item mb-2">
                 <div class="nav-mainItem ">
-                    <span class="text nav-text">Payroll</span>
+                    <span class="text nav-text">{{ 'payroll' | translate }}</span>
                     <i class="fa-solid fa-angle-right"></i>
                 </div>
 
                 @if(isPayroll ){<ul>
                   <li>
                     <a routerLink="/employees-salary" class="nav-link">
-                      <span class="sub-text">Employees Salary</span>
+                      <span class="sub-text">{{ 'employees-salary' | translate }}</span>
                   </a>
                   </li>
                 </ul>}
             </li>
             <li title="Reports" class="menu-item mb-2">
               <a routerLink="/reports" class="nav-link">
-                  <span class="text nav-text">Reports</span>
+                  <span class="text nav-text">{{ 'reports' | translate }}</span>
                   <i class="fa-solid fa-angle-right"></i>
                 </a>
           </li>
@@ -101,7 +111,7 @@
       <div class="nav-profile">
         <li>
           <a routerLink="/profile" class="">
-              <span><img src="../../../../assets/img1.jpg" alt="" class="profile-img">Profile
+              <span><img src="../../../../assets/img1.jpg" alt="" class="profile-img">{{ 'profile' | translate }}
               </span><i class="fa-solid fa-angle-right "></i>
             </a>
 
@@ -111,7 +121,7 @@
         <a  (click)="logout()" >
             <span>
               <i class="fa-solid fa-right-from-bracket"></i>
-              Logout</span>
+              {{ 'logout' | translate }}</span>
                 <i class="fa-solid fa-angle-right"></i>
           </a>
 

@@ -11,6 +11,7 @@ import { Employee } from '../shared/models/Employee';
 import { Columns } from '../shared/models/Columns';
 import { EmployeeService } from '../shared/services/employee.service';
 import { TableService } from '../shared/services/table.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-reports',
@@ -20,17 +21,18 @@ import { TableService } from '../shared/services/table.service';
     HeaderComponent,
     OvertimeComponent,
     EmployeesSalaryComponent,
-    AllLeaveComponent, NgIf, EmployeeTableComponent],
+    AllLeaveComponent, NgIf,TranslateModule, EmployeeTableComponent],
   templateUrl: './reports.component.html',
   styleUrl: './reports.component.scss'
 })
-export class ReportsComponent {
+export class ReportsComponent implements OnInit{
 
   paddinggH2 = false;
   pageTitle=["Reports"];
-  showsalary=false;
+  showsalary=true;
   showleave=false;
   showovertime=false;
+  noneDisplay=true;
 
   Salaydata:Employee[] = [];
   headerSalary:Columns[]=[];
@@ -38,17 +40,24 @@ export class ReportsComponent {
   headerOvertime:Columns[]=[];
   leaveData:Employee[]=[];
   headerLeave:Columns[]=[];
-
+ngOnInit() {
+  this.Salaydata=this.employeeService.getEmployee();
+  this.headerSalary=this.tableService.getColumns('employee-salary');
+  
+}
 constructor(private employeeService:EmployeeService,private tableService:TableService){
 
 }
+
     toggleSalaryReport(reportType:string){
     this.showsalary=reportType==='salary';
     this.Salaydata=this.employeeService.getEmployee();
     this.headerSalary=this.tableService.getColumns('employee-salary');
     this.showleave=false;
     this.showovertime=false;
+
   }
+
   toggleLeaveReport(reportType:string){
     this.showleave=reportType==='leave';
     this.leaveData=this.employeeService.getEmployee();
@@ -63,4 +72,5 @@ constructor(private employeeService:EmployeeService,private tableService:TableSe
     this.showsalary=false;
     this.showleave=false;
     }
+
 }

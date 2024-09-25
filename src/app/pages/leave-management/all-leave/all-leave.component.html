@@ -2,12 +2,12 @@
 <div class="ng-container">
   <a routerLink="/home"><i class="fa-solid fa-house"></i></a>
   <i class="fa-solid fa-angle-right"></i>
-  <a routerLink="/all-leave"><span>Leave Management</span></a>
+  <a routerLink="/all-leave"><span>{{'leave_management' | translate}}</span></a>
   <i class="fa-solid fa-angle-right"></i>
-  <a routerLink="/all-leave"><span>All Leave</span></a>
+  <a routerLink="/all-leave"><span>>{{'all_leave' | translate}}</span></a>
 </div>
 <div class="leave-modal">
-  <button (click)="addModal()" class="btn-modal"> Add Leave</button>
+  <button (click)="addModal()" class="btn-modal">{{'add_leave' | translate}}</button>
 </div>
   @if (showModal ) {
     <app-leave-modal></app-leave-modal>

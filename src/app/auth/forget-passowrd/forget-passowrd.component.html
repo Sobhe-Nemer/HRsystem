@@ -8,21 +8,21 @@
           <h1>HR System</h1>
         </div>
         <div class="span1">
-          <span>Reset Password<br> Us Help You</span>
+          <span>{{ 'reset_password_help' | translate }}</span>
         </div>
         <div class="email d-flex justify-content-center flex-column">
-          <label for="">Enter your registered email address.</label>
+          <label for="">{{ 'enter_registered_email' | translate }}</label>
           <input type="email" placeholder="Employee@gmail.com" required />
         </div>
         <div>
         </div>
         <div class="btn-login d-flex justify-content-center">
-          <button class="btn "  routerLink="/resetPassword">Send Instructions </button>
+          <button class="btn "  routerLink="/resetPassword">{{ 'send_instructions' | translate }} </button>
         </div>
         <div class="login d-flex justify-content-center">
-          <a routerLink="/login"  ><span  >LOGIN?</span></a>
+          <a routerLink="/login"  ><span  >{{ 'login_question' | translate }}</span></a>
           </div>
       </form>
     </div>
   </div>
-<app-footer></app-footer>
+<app-footer class="footer"></app-footer>

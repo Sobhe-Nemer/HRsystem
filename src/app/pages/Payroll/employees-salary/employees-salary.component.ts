@@ -8,11 +8,12 @@ import { Employee } from '../../shared/models/Employee';
 import { TableService } from '../../shared/services/table.service';
 import { Columns } from '../../shared/models/Columns';
 import { SalaryModalComponent } from '../../shared/modals/salary-modal/salary-modal.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-employees-salary',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, EmployeeTableComponent,RouterLink,SalaryModalComponent],
+  imports: [HeaderComponent, FooterComponent,TranslateModule, EmployeeTableComponent,RouterLink,SalaryModalComponent],
   templateUrl: './employees-salary.component.html',
   styleUrl: './employees-salary.component.scss'
 })

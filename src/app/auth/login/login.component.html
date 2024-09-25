@@ -6,22 +6,22 @@
   <div class="contener d-flex ">
     <img class="login-img"src="../../../assets/login.png" alt="fasdfsagv">
     <form action="" class="login-form flex-column">
-      <h1>SIGN IN</h1>
+      <h1>{{'signin' | translate }}</h1>
       <div class="email">
-        <label for="">Email</label>
+        <label for="">{{"email" | translate }}</label>
         <input type="email" placeholder="employee@gmail.com" required />
       </div>
       <div>
           <div class="forgetPass d-flex justify-content-end">
-            <a routerLink="/forgetpassword" ><span>forget Password</span></a>
+            <a routerLink="/forgetpassword" ><span>{{ 'forget_password' | translate }}</span></a>
             </div>
-        <label for="">Password</label>
+        <label for="">{{"password" | translate }}</label>
         <input type="password" placeholder="******" required />
       </div>
       <div class="btn-login d-flex justify-content-center">
-        <button class="btn " (click)="login()">SIGN IN</button>
+        <button class="btn " (click)="login()">{{'signin' | translate }}</button>
       </div>
     </form>
   </div>
 </div>
-<app-footer></app-footer>
+<app-footer class="footer"></app-footer>

@@ -84,7 +84,9 @@ h1 {
 }
 
 
-::ng-deep .footer {
-  margin-bottom: 120px;
-  top: 109%;
+
+.footer{
+  display: flex;
+  position: absolute;
+  width: 100%;
 }

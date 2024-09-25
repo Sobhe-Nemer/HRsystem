@@ -1,21 +1,21 @@
 <app-header [isTitle]="pageTitle"  ></app-header>
-<div class="ng-container">
+<div class="ng-container" >
   <a routerLink="/home"><i class="fa-solid fa-house"></i></a>
-  <i  class="fa-solid fa-angle-right"></i>
-  <a routerLink="/home"><span>Home</span></a>
   <i class="fa-solid fa-angle-right"></i>
-  <a routerLink="/home"><span>Dashboard</span></a>
+  <a routerLink="/home"><span>{{'home' | translate }}</span></a>
+  <i class="fa-solid fa-angle-right"></i>
+  <a routerLink="/home"><span>{{'dashboard' | translate }}</span></a>
 </div>
 <section class="dashboard">
   <div routerLink="/attendance" class="piechart">
-    <h3>Daily attendance rate</h3>
+    <h3>{{'daily_attendance_rate' | translate }}</h3>
     <canvas id="myPieChart" width="400" height="400"></canvas>
   </div>
   <div class="calendar-container">
-    <h3>Calendar</h3>
+    <h3>{{'calendar' | translate }}</h3>
     <full-calendar [options]="calendarOptions"></full-calendar>
 </div>
-<div class="dashboard-table" routerLink="/all-leave"  >
+<div class="dashboard-table"   >
   <app-employee-table
   [data]="leaveData"
   [columns]="headerLeave"
@@ -23,7 +23,7 @@
 </app-employee-table>
 </div>
   <div routerLink="/overtime" class="barChart">
-    <h3>Avg Overtime </h3>
+    <h3>{{'avg_overtime' | translate }} </h3>
     <canvas id="myBarChart"  width="400" height="300"></canvas>
   </div>
 </section>

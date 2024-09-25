@@ -46,5 +46,9 @@ export class EmployeeTableComponent implements OnInit{
       const matchesName = this.searchEmployeeName ? row.employee[1].toLowerCase().includes(this.searchEmployeeName.toLowerCase()) : true;
       return matchesId && matchesName;
     });
+}clear(){
+  this.searchEmployeeName = "";
+  this.searchEmployeeId = ""
+  this.filteredData=this.data
 }
 }
