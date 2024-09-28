@@ -25,7 +25,7 @@ constructor(private employeeServise:EmployeeService,private tableService:TableSe
 }
 
   profileData:Employee[]=[];
-  pageTitle=["All Employee"];
+  pageTitle="All Employee";
 
 
 }

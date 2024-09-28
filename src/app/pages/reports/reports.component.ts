@@ -28,7 +28,7 @@ import { TranslateModule } from '@ngx-translate/core';
 export class ReportsComponent implements OnInit{
 
   paddinggH2 = false;
-  pageTitle=["Reports"];
+  pageTitle="Reports";
   showsalary=true;
   showleave=false;
   showovertime=false;
@@ -43,7 +43,7 @@ export class ReportsComponent implements OnInit{
 ngOnInit() {
   this.Salaydata=this.employeeService.getEmployee();
   this.headerSalary=this.tableService.getColumns('employee-salary');
-  
+
 }
 constructor(private employeeService:EmployeeService,private tableService:TableService){
 

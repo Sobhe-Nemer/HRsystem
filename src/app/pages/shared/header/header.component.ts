@@ -47,7 +47,7 @@ payroll(){
     this.isLeave=false;
     this.isRequests=false;
 }
-@Input() isTitle : string[]=[];
+@Input() isTitle : string="";
 
 isDropdownOpen = false;
 selectedLanguage: string = 'English';

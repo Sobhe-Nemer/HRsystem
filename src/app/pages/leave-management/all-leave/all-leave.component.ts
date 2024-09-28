@@ -50,7 +50,7 @@ constructor(private employeeServise:EmployeeService,private tableService:TableSe
       console.log('Approve clicked');
     }
   }
-  pageTitle=["All Leave "];
+  pageTitle="All Leave ";
 
 
 }

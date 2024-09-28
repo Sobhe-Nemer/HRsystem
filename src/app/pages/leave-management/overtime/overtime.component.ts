@@ -28,5 +28,5 @@ export class OvertimeComponent implements OnInit  {
   }
   overtimeData:Employee[]=[];
   headerOvertime:Columns[]=[];
-  pageTitle=["Overtime"];
+  pageTitle="Overtime";
 }

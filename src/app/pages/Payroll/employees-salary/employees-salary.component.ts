@@ -20,7 +20,7 @@ import { TranslateModule } from '@ngx-translate/core';
 export class EmployeesSalaryComponent implements OnInit {
   Salaydata: Employee[] = [];
   headerSalary: Columns[] = [];
-  pageTitle = ["Employees Salary"];
+  pageTitle = "Employees Salary";
   isModalVisible = false;
 
   constructor(private employeeServcie: EmployeeService, private tableService: TableService) {}

@@ -28,6 +28,6 @@ export class AttendanceComponent implements OnInit  {
   }
   attendanceData:Employee[]=[];
   headers:Columns[]=[];
-  pageTitle=["Attendance"];
+  pageTitle="Attendance";
 }
 

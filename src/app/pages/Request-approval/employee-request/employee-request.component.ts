@@ -39,5 +39,5 @@ showModal=false;
       console.log('Approve clicked');
     }
   }
-  pageTitle=["Employee Request"]
+  pageTitle="Employee Request";
 }

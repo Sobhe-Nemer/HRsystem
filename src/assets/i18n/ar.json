@@ -41,7 +41,9 @@
   "salary": "الراتب",
   "birthday": "تاريخ الميلاد",
   "mobile_phone": "رقم الهاتف",
-  "total_overtime": "إجمالي الساعات الإضافية",
+  "total_overtime":"إجمالي الساعات الإضافي بالشهر",
+  "total_Absence/M":"إجمالي الفياب  بالشهر",
+  "total_leave/M":"إجمالي الإجازات المرضية بالشهر",
   "salary_report": "تقرير الرواتب",
   "leave_report": "تقرير الإجازات",
   "overtime_report": "تقرير الوقت الإضافي"

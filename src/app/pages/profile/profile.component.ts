@@ -12,5 +12,5 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './profile.component.scss'
 })
 export class ProfileComponent {
-  pageTitle=["Profile"]
+  pageTitle="Profile";
 }

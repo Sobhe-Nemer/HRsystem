@@ -37,7 +37,7 @@ constructor(private employeeService:EmployeeService,private tableService:TableSe
 }
 
   paddinggH2 = false;
-  pageTitle = ["Dashboard"];
+  pageTitle = "Dashboard";
   presentCount = 70;
   absentCount = 30;
   leaveData:Employee[]=[];

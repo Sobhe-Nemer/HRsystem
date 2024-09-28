@@ -41,7 +41,9 @@
     "salary": "Salary",
     "birthday": "Birthday",
     "mobile_phone": "Mobile Phone",
-    "total_overtime": "Total Overtime",
+    "total_overtime/M": "Total Overtime/M",
+    "total_Absence/M":"total Absence/M",
+    "total_leave/M":"total Sick Leave/M",
     "salary_report": "Salary Report",
   "leave_report": "Leave Report",
   "overtime_report": "Overtime Report"
